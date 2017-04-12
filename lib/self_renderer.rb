@@ -39,7 +39,7 @@ module SelfRenderer
     end
 
     def render_self(template: nil, partial: nil, assigns: {}, locals: {})
-      name = self.class.name.parameterize(separator: "_")
+      name = self.class.name.parameterize(separator: "_").to_sym
       assigns[name] = self
       locals[name] = self
       return self_renderer.render(template, assigns: assigns, locals: locals).squish if template
