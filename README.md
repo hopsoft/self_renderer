@@ -9,27 +9,26 @@ Rails model & object rendering outside the context of web requests.
 
 ## Quick Start
 
-```sh
-gem install self_renderer
+```ruby
+# Gemfile
+gem "self_renderer"
 ```
 
 ```ruby
 # app/models/user.rb
-require "self_renderer"
-
 class User < ApplicationRecord
   include SelfRenderer
 end
 ```
 
 ```erb
-<%# app/views/users/show.html.erb %>
+<!-- app/views/users/show.html.erb -->
 <h1>User</h1>
 <%= render "item" %>
 ```
 
 ```erb
-<%# app/views/users/_item.html.erb %>
+<!-- app/views/users/_item.html.erb -->
 <p><%= @user.name %></p>
 ```
 
