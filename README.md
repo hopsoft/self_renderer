@@ -1,6 +1,6 @@
 # Rails Rendering for ActiveRecord & Other Objects
 
-Rails model & object rendering outside the context of a web request.
+Rails model & object rendering outside the context of web requests.
 
 ## Use Cases
 

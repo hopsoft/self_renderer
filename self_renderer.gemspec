@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.authors     = ["Nathan Hopkins"]
   gem.email       = ["natehop@gmail.com"]
   gem.homepage    = "https://github.com/hopsoft/self_renderer"
-  gem.summary     = "Self rendering for ActiveRecord & friends"
+  gem.summary     = "Rails model & object rendering outside the context of web requests"
 
   gem.files       = Dir["lib/**/*.rb", "bin/*", "[A-Z]*"]
   gem.test_files  = Dir["test/**/*.rb"]
