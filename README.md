@@ -1,4 +1,4 @@
-# Rails Rendering for ActiveRecord & Other Objects
+# SelfRenderer
 
 Rails model & object rendering outside the context of web requests.
 
@@ -13,7 +13,7 @@ Rails model & object rendering outside the context of web requests.
 gem install self_renderer
 ```
 
-```
+```ruby
 require "self_renderer"
 
 class User < ApplicationRecord
@@ -21,7 +21,7 @@ class User < ApplicationRecord
 end
 ```
 
-```
+```ruby
 # render html strings
 User.find(1).render_to_html(template: "users/show.html.erb")
 User.find(2).render_to_html(partial: "users/_item.html.erb")
