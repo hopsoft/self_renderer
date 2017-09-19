@@ -48,14 +48,14 @@ json.name @user.name
 
 ```ruby
 # render html strings
-User.find(1).render_with(template: "users/show.html.erb")
-User.find(2).render_with(partial: "users/_item.html.erb")
+User.find(1).render_with(template: "users/show.html")
+User.find(2).render_with(partial: "users/item.html")
 
 # render json strings
-User.find(3).render_with(template: "users/show.json.jbuilder")
-User.find(4).render_with(partial: "users/_item.json.jbuilder")
+User.find(3).render_with(template: "users/show.json")
+User.find(4).render_with(partial: "users/item.json")
 
 # render ruby hashes
-User.find(5).render_to_hash(template: "users/show.json.jbuilder")
-User.find(6).render_to_hash(partial: "users/_item.json.jbuilder")
+User.find(5).render_to_hash(template: "users/show.json")
+User.find(6).render_to_hash(partial: "users/item.json")
 ```
