@@ -15,7 +15,9 @@ module SelfRenderer
 
   # Returns a Hash representation of this object as rendered by #render_to_json
   def render_to_hash(template: nil, partial: nil, assigns: {}, locals: {})
-    JSON.load render_to_json(template: template, partial: partial, assigns: assigns, locals: locals)
+    raise ArgumentError.new("Must use json template") unless template.nil? || template.to_s.include?(".json")
+    raise ArgumentError.new("Must use json partial") unless partial.nil? || partial.to_s.include?(".json")
+    JSON.load render_with(template: template, partial: partial, assigns: assigns, locals: locals)
   end
 
   protected
