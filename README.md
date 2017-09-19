@@ -1,4 +1,4 @@
-[![Lines of Code](http://img.shields.io/badge/lines_of_code-43-brightgreen.svg?style=flat)](http://blog.codinghorror.com/the-best-code-is-no-code-at-all/)
+[![Lines of Code](http://img.shields.io/badge/lines_of_code-31-brightgreen.svg?style=flat)](http://blog.codinghorror.com/the-best-code-is-no-code-at-all/)
 [![Code Status](http://img.shields.io/codeclimate/github/hopsoft/self_renderer.svg?style=flat)](https://codeclimate.com/github/hopsoft/self_renderer)
 [![Dependency Status](http://img.shields.io/gemnasium/hopsoft/self_renderer.svg?style=flat)](https://gemnasium.com/hopsoft/self_renderer)
 
@@ -48,12 +48,12 @@ json.name @user.name
 
 ```ruby
 # render html strings
-User.find(1).render_to_html(template: "users/show.html.erb")
-User.find(2).render_to_html(partial: "users/_item.html.erb")
+User.find(1).render_with(template: "users/show.html.erb")
+User.find(2).render_with(partial: "users/_item.html.erb")
 
 # render json strings
-User.find(3).render_to_json(template: "users/show.json.jbuilder")
-User.find(4).render_to_json(partial: "users/_item.json.jbuilder")
+User.find(3).render_with(template: "users/show.json.jbuilder")
+User.find(4).render_with(partial: "users/_item.json.jbuilder")
 
 # render ruby hashes
 User.find(5).render_to_hash(template: "users/show.json.jbuilder")
