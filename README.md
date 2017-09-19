@@ -57,5 +57,5 @@ User.find(4).render_with(partial: "users/_item.json.jbuilder")
 
 # render ruby hashes
 User.find(5).render_to_hash(template: "users/show.json.jbuilder")
-User.find(6).render_to_hash(partial: "users/show.json.jbuilder")
+User.find(6).render_to_hash(partial: "users/_item.json.jbuilder")
 ```
