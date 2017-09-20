@@ -59,3 +59,7 @@ User.find(4).render_with(partial: "users/item.json")
 User.find(5).render_to_hash(template: "users/show.json")
 User.find(6).render_to_hash(partial: "users/item.json")
 ```
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/QMSjMHrtPhvfmCnk5Hbikhhr/hopsoft/self_renderer'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/QMSjMHrtPhvfmCnk5Hbikhhr/hopsoft/self_renderer.svg' />
+</a>
